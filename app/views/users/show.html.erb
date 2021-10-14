@@ -1,0 +1,29 @@
+<div class="user-main">
+  <div class="user-container">
+    <div class="user-top">
+      <div class="user-image">
+        <%= image_tag "/user_images/#{@user.image_name}" %>
+      </div>
+      <div class="user-name">
+        <%= @user.name %>
+      </div>
+      <div class="user">
+        <% if @user.id == @current_user.id %>
+          <%= link_to("編集","/users/#{@user.id}/edit") %>
+          <%= link_to("削除","/users/#{@user.id}", {method: "delete"}) %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="user-show-link">
+      <p>Posts!</p>
+      <%= link_to("Likes!", "/users/#{@user.id}/likes") %>
+    </div>
+
+    <div class="user-show-posts">
+      <% @user.posts.each do |post| %>
+        <%= link_to image_tag("/posts_images/#{post.movie_image}"), "/posts/#{post.id}" %>
+      <% end %>
+    </div>
+  </div>
+</div>

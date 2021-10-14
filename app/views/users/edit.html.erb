@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="container">
+    <div class="form-heading">User Edit</div>
+      <div class="users-index">
+        <div class="form">
+          <% @user.errors.full_messages.each do |message| %>
+            <div class="error-messages">
+              <%= message %>
+            </div>
+          <% end %>
+
+          <%=form_with(model: @user , local: true, multipart: true) do |f| %>
+            <%= f.label :user_name %>
+            <%= f.text_field :name %>
+            <%= f.label :image_name %>
+            <%= f.file_field :image %>
+            <%= f.submit value="edit" %>
+          <% end %>
+          <div class="btn">
+            <%= link_to("back", "/users/#{@current_user.id}") %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="user-main">
+  <div class="user-container">
+    <div class="user-top-tag">User List</div>
+
+    <div class="user-index-posts">
+      <% @users.each do |user| %>
+        <div class="user-index-post">
+          <div class="user-index-image">
+            <%= link_to image_tag("/user_images/#{user.image_name}"), "/users/#{user.id}" %>
+          </div>
+          <div class="user-name">
+            <%= link_to(user.name, "/users/#{user.id}") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

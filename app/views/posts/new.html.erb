@@ -1,0 +1,43 @@
+<div class="main posts-new">
+  <div class="container">
+    <div class="form-heading">New Post</div>
+      <div class="posts-index">
+        <div class="form posts-form">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="error-messages">
+              <%= message %>
+            </div>
+          <% end %>
+          <div class="rating-box mt-3">
+            <%=form_with(model: @post , local: true, multipart: true) do |f| %>
+              <%= f.label :title %>
+              <%= f.text_field :title %>
+              <%= f.label :movie_image %>
+              <%= f.file_field :image %>
+              <%= f.label :score %>
+              <div class="main-rating">
+                <div class="ratings">
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                  <span class="fa fa-star-o" id="star"></span>
+                </div>
+                <div class="ml-3 rating-value-display"><span id="rating-value-display">0</span>/5</div>
+              </div>
+              <%= f.hidden_field :score, id: "rating-value" %>
+              <%= f.label :comment %>
+              <%= f.text_area :comment %>
+              <%= f.submit value="post" %>
+            <% end %>
+            <div class="btn">
+              <%= link_to("back", "/posts") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag "posts.js" %>

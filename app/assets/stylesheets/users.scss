@@ -1,0 +1,127 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*-----user_common-----*/
+
+.users-index {
+  margin-bottom: 5px;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+/*-----user_show,index,likes-----*/
+
+.user-main {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.user-container {
+  width: 80%;
+  height: auto;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-top {
+  text-align: center;
+}
+
+.user-name {
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+.user-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+.user-show-posts {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-show-post {
+  text-align: center;
+}
+
+.user-show-posts:after{
+  content:"";
+  display:block;
+  width: 400px;
+  height: 300px;
+}
+
+.user-show-posts img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0 0;
+  margin-bottom: 65px;
+}
+
+.user-show-link {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+  border-bottom: solid 1px #dee7ec;
+}
+
+.user-show-link a {
+  color: #8E8E8E;
+}
+
+.user-show-link p {
+  border-bottom: solid 2px #3EC6F6;
+}
+
+/*-----user_index-----*/
+
+.user-top-tag {
+  text-align: center;
+  font-weight: 300;
+  font-size: 50px;
+  margin-bottom: 130px;
+}
+
+.user-index-posts {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-index-post {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .user-index-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+    border: 1px solid #3EC6F6;
+  }

@@ -1,0 +1,153 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.name {
+  background-color: aqua;
+}
+
+.posts  {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.posts img {
+  width: 80%;
+  height: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 10px auto;
+  object-fit: cover;
+}
+
+.rating-box .ratings .fa {
+  font-size: 30px;
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+.main-rating {
+  display: flex;
+  margin: 0px auto;
+  padding-bottom: 0px;
+}
+
+.rating-value-display {
+  font-size: 20px;
+}
+
+
+.star-rating {
+  position: relative;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #fc3;
+}
+
+.star-rating-back {
+  color: #ccc;
+}
+
+.average-score {
+  display: flex;
+}
+
+.average-score-display {
+  font-size: 15px;
+}
+
+.like-btn {
+  color: #8899a6;
+}
+
+.like-btn-unlike {
+  color: #ff2581;
+}
+
+.posts-index {
+  margin-bottom: 5px;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 1px 3px #c1ced7;
+}
+
+ .post-user {
+  width: 80%;
+  height: 60px;
+  margin: 10px auto;
+ }
+
+ .post-user-left {
+   line-height: 60px;
+   float: left;
+  }
+
+  .post-user-left img {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   box-shadow: 0 2px 6px #c1ced7;
+   object-fit: cover;
+  }
+
+ .post-user-right {
+   line-height: 60px;
+   float: left;
+ }
+
+ .post-user-right a {
+   font-weight: 600;
+   padding-left: 15px;
+ }
+
+ .posts-title {
+   width: 80%;
+   margin: 5px auto 0px auto;
+   font-weight: 600;
+ }
+
+ .posts-score {
+   width: 80%;
+   margin: 0px auto;
+ }
+ .posts-comment span {
+   font-weight: 600;
+ }
+
+ .posts-comment {
+   margin: 0px auto;
+   width: 80%;
+ }
+ .posts-day {
+   margin: 5px auto;
+   width: 80%;
+ }
+
+ .posts-option {
+   margin: 5px auto;
+   width: 80%;
+   position: relative;
+   padding-bottom: 20px;
+ }
+
+ .posts-left {
+   position: absolute;
+   left: 0;
+ }
+
+ .posts-right {
+   position: absolute;
+   right: 10px;
+ }
+
+ .posts-right a {
+   color: #3EC6F6;
+ }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WatchMovies</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/45f40de133.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="header-center">
+        <div class="header-logo">
+          <% if @current_user %>
+            <h1 style="font-family: cursive;"><%= link_to("WatchMovies", "/posts") %></h1>
+          <% else %>
+            <h1 style="font-family: cursive;"><%= link_to("WatchMovies", "/") %></h1>
+          <% end %>
+        </div>
+        <ul class="header-nav">
+          <% if @current_user %>
+            <li><%= link_to(@current_user.name, "/users/#{@current_user.id}") %></li>
+            <li><%= link_to('PostList', "/posts") %></li>
+            <li><%= link_to('NewPost', "/posts/new") %></li>
+            <li><%= link_to('UserList', "/users") %></li>
+            <li><%= link_to('Logout', "/logout", {method: "post"}) %></li>
+          <% else %>
+            <li><%= link_to('NewAcount', "/users/new") %></li>
+            <li><%= link_to('Login', "/login") %></li>
+          <% end %>
+        </ul>
+      </div>
+<nav id="nav">
+  <ul class="header-menush">
+    <% if @current_user %>
+        <li>
+          <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+        </li>
+        <li>
+          <%= link_to('PostList', "/posts") %>
+        </li>
+        <li>
+          <%= link_to('NewPost', "/posts/new") %>
+        </li>
+        <li>
+          <%= link_to('UserList', "/users") %>
+        </li>
+        <li>
+          <%= link_to('Logout', "/logout", {method: "post"}) %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to('NewAcount', "/users/new") %>
+        </li>
+        <li>
+          <%= link_to('Login', "/login") %>
+        </li>
+      <% end %>
+  </ul>
+</nav>
+<div id="hamburger">
+  <span class="inner_line" id="line1"></span>
+  <span class="inner_line" id="line2"></span>
+  <span class="inner_line" id="line3"></span>
+</div>
+    </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+
+
+<script>
+  function hamburger(){
+    document.getElementById('line1').classList.toggle('line_1');
+    document.getElementById('line2').classList.toggle('line_2');
+    document.getElementById('line3').classList.toggle('line_3');
+    document.getElementById('nav').classList.toggle('in');
+  };
+  document.getElementById('hamburger').addEventListener('click',function(){
+    hamburger();
+  });
+</script>
+
+
+    <%= yield %>
+  </body>
+</html>

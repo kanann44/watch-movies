@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="container">
+    <div class="form-heading">New Acount</div>
+      <div class="users-index">
+        <div class="form">
+          <% @user.errors.full_messages.each do |message| %>
+            <div class="error-messages">
+              <%= message %>
+            </div>
+          <% end %>
+
+          <%=form_with(model: @user , local: true, multipart: true) do |f| %>
+            <%= f.label :user_name %>
+            <%= f.text_field :name %>
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+            <%= f.submit value="new" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

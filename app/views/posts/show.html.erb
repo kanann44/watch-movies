@@ -1,0 +1,51 @@
+<div class="main">
+  <div class="container">
+    <div class="posts-index">
+      <div class="post-user">
+        <div class="post-user-left">
+          <%= image_tag "/user_images/#{@user.image_name}" %>
+        </div>
+        <div class="post-user-right">
+          <%= link_to(@user.name,"/users/#{@user.id}") %>
+        </div>
+      </div>
+      <div class="posts">
+        <%= image_tag "/posts_images/#{@post.movie_image}" %>
+      </div>
+      <div class="posts-title">
+        <p><span>TITLE：</span><%= @post.title %></p>
+      </div>
+      <div class="posts-score">
+        <div class="star-rating mb-2">
+          <div class="star-rating-front" style="width: <%= @post.score.to_f*20 %>%">★★★★★</div>
+          <div class="star-rating-back">★★★★★</div>
+        </div>
+      </div>
+      <div class="posts-comment">
+        <p><span>REVIEW：</span><br><%=safe_join(@post.comment.split("\n"),tag(:br))%></p>
+      </div>
+      <div class="posts-day">
+        <p><%= @post.created_at.to_s(:datetime) %></p>
+      </div>
+      <div class="posts-option">
+        <div class="posts-left">
+          <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+            <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn-unlike"></span>
+            <% end %>
+          <% else %>
+            <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn"></span>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="posts-right">
+          <% if @post.user_id == @current_user.id %>
+            <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+            <%= link_to("削除", "/posts/#{@post.id}", {method: "delete"}) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="container">
+  <div class="form-heading">Login</div>
+    <div class="users-index">
+      <div class="form">
+        <% if @error_message %>
+          <div class="error-messages">
+            <%= @error_message %>
+          </div>
+        <% end %>
+        <%=form_with(url: login_path, scope: :user, local: true) do |f| %>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+          <%= f.submit value="login" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
