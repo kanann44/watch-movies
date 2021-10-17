@@ -157,3 +157,36 @@ label {
   color: black;
   cursor: pointer;
 }
+
+
+@media all and (max-width: 1000px) {
+    .form-heading {
+      font-weight: 200;
+      margin: 30px 0px 20px 0px;
+      font-size: 30px;
+      color: black;
+    }
+    .container {
+      width: 70%;
+      margin: 30px auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      clear: both;
+ }
+  }
+
+@media all and (max-width: 670px) {
+    .form-heading {
+      font-weight: 200;
+      margin: 30px 0px 20px 0px;
+      font-size: 30px;
+      color: black;
+    }
+    .container {
+      width: 100%;
+      margin: 30px auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      clear: both;
+ }
+  }
