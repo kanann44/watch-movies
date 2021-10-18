@@ -125,3 +125,62 @@
     margin-left: 20px;
     border: 1px solid #3EC6F6;
   }
+
+
+  @media all and (max-width: 1170px) {
+    .user-top-tag {
+      text-align: center;
+      font-weight: 200;
+      font-size: 30px;
+      margin-bottom: 100px;
+    }
+    .user-container {
+      width: 100%;
+      height: auto;
+      margin-top: 80px;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .user-index-posts {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .user-index-post {
+      width: 33%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media all and (max-width: 750px) {
+    .user-top-tag {
+      text-align: center;
+      font-weight: 200;
+      font-size: 30px;
+      margin-bottom: 100px;
+    }
+    .user-container {
+      width: 100%;
+      height: auto;
+      margin-top: 80px;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .user-index-posts {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .user-index-post {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
