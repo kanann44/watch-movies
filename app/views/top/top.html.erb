@@ -33,55 +33,44 @@
               <li><%= link_to('Login', "/login") %></li>
             <% end %>
           </ul>
+          <div id="hamburger" onclick="clickBtn1()">
+            <span class="inner_line" id="line1"></span>
+            <span class="inner_line" id="line2"></span>
+            <span class="inner_line" id="line3"></span>
+          </div>
         </div>
       </div>
+      <nav id="nav">
+        <ul class="header-menush">
+          <% if @current_user %>
+              <li>
+                <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+              </li>
+              <li>
+                <%= link_to('PostList', "/posts") %>
+              </li>
+              <li>
+                <%= link_to('NewPost', "/posts/new") %>
+              </li>
+              <li>
+                <%= link_to('UserList', "/users") %>
+              </li>
+              <li>
+                <%= link_to('Logout', "/logout", {method: "post"}) %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to('NewAcount', "/users/new") %>
+              </li>
+              <li>
+                <%= link_to('Login', "/login") %>
+              </li>
+            <% end %>
+        </ul>
+      </nav>
 
 
-<nav id="nav">
-  <ul class="header-menush">
-    <% if @current_user %>
-        <li>
-          <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
-        </li>
-        <li>
-          <%= link_to('PostList', "/posts") %>
-        </li>
-        <li>
-          <%= link_to('NewPost', "/posts/new") %>
-        </li>
-        <li>
-          <%= link_to('UserList', "/users") %>
-        </li>
-        <li>
-          <%= link_to('Logout', "/logout", {method: "post"}) %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to('NewAcount', "/users/new") %>
-        </li>
-        <li>
-          <%= link_to('Login', "/login") %>
-        </li>
-      <% end %>
-  </ul>
-</nav>
-<div id="hamburger">
-  <span class="inner_line" id="line1"></span>
-  <span class="inner_line" id="line2"></span>
-  <span class="inner_line" id="line3"></span>
-</div>
 
-<script>
-  function hamburger(){
-    document.getElementById('line1').classList.toggle('line_1');
-    document.getElementById('line2').classList.toggle('line_2');
-    document.getElementById('line3').classList.toggle('line_3');
-    document.getElementById('nav').classList.toggle('in');
-  };
-  document.getElementById('hamburger').addEventListener('click',function(){
-    hamburger();
-  });
-</script>
 
 
         <div class="top-wrapper">
@@ -96,6 +85,27 @@
           <%= flash[:notice] %>
         </div>
       <% end %>
+
+      <script>
+        function hamburger(){
+          document.getElementById('line1').classList.toggle('line_1');
+          document.getElementById('line2').classList.toggle('line_2');
+          document.getElementById('line3').classList.toggle('line_3');
+        };
+        document.getElementById('hamburger').addEventListener('click',function(){
+          hamburger();
+        });
+        document.getElementById('nav').style.display ="none";
+        function clickBtn1(){
+          const nav = document.getElementById("nav");
+
+          if(nav.style.display=="block"){
+            nav.style.display ="none";
+          }else{
+            nav.style.display ="block";
+          }
+        }
+      </script>
     </div>
 
     <%= yield %>
