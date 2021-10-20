@@ -95,7 +95,7 @@
 
 .form-heading {
   font-weight: 300;
-  margin: 60px 0 20px;
+  margin: 20px 0 20px;
   font-size: 48px;
   color: black;
   z-index: 2;
@@ -163,31 +163,25 @@ label {
 @media all and (max-width: 1000px) {
     .form-heading {
       font-weight: 200;
-      margin: 30px 0px 20px 0px;
       font-size: 30px;
-      color: black;
     }
     .container {
       width: 70%;
-      margin: 30px auto;
-      padding-left: 15px;
-      padding-right: 15px;
-      clear: both;
- }
-  }
+    }
+    .header-center {
+      width: 90%;
+    }
+}
 
 @media all and (max-width: 670px) {
-    .form-heading {
-      font-weight: 200;
-      margin: 30px 0px 20px 0px;
-      font-size: 30px;
-      color: black;
-    }
-    .container {
-      width: 100%;
-      margin: 30px auto;
-      padding-left: 15px;
-      padding-right: 15px;
-      clear: both;
- }
+  .container {
+    width: 100%;
   }
+  .header-center {
+    width: 100%;
+  }
+  .header-log h1 a {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}

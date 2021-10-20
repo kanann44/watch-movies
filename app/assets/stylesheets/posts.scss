@@ -151,36 +151,26 @@
    color: #3EC6F6;
  }
 
-  @media all and (max-width: 750px) {
+  @media all and (max-width: 1000px) {
     .posts  {
-      width: 100%;
       margin: 0px auto;
     }
     .posts img {
       width: 100%;
-      box-shadow: 0 2px 6px #c1ced7;
-      margin: 10px auto;
-      object-fit: cover;
     }
     .post-user {
       width: 100%;
-      margin: 10px auto;
     }
     .posts-title {
       width: 100%;
-      margin: 5px auto 0px auto;
-      font-weight: 600;
     }
     .posts-score {
       width: 100%;
-      margin: 0px auto;
     }
     .posts-comment {
-      margin: 0px auto;
       width: 100%;
     }
     .posts-day {
-      margin: 5px auto;
       width: 100%;
     }
   }
