@@ -9,69 +9,62 @@
   min-height: 100vh;
 }
 
-  .header-log {
-    float: left;
-  }
+.header-log {
+  float: left;
+}
 
-  .header-log h1 a {
-    font-size: 45px;
-    font-weight: 500;
-    line-height: 65px;
-  }
+.header-log h1 a {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 65px;
+}
 
-  .header-nab {
-    float: right;
-  }
+.header-nab {
+  float: right;
+}
 
-  .header-nab li {
-    float: left;
-    font-size: 30px;
-    padding-left: 20px;
-    font-weight: 400;
-    line-height: 65px;
-  }
+.header-nab li {
+  float: left;
+  font-size: 30px;
+  padding-left: 20px;
+  font-weight: 400;
+  line-height: 65px;
+}
 
- .head {
-   width: 100%;
-   height: 55px;
-   text-align: center;
-  }
+.head {
+  width: 100%;
+  height: 55px;
+  text-align: center;
+}
 
-  .center {
-    height: 55px;
-    width: 90%;
-    display: inline-block;
-  }
+.center {
+  height: 55px;
+  width: 90%;
+  display: inline-block;
+}
 
-  .top-wrapper {
-    text-align: center;
-    width: 100%;
-    padding: 180px 0px 100px 0px;
-  }
+.top-wrapper {
+  text-align: center;
+  width: 100%;
+  padding: 180px 0px 100px 0px;
+}
 
-  .top-wrapper h1 {
-    font-size: 50px;
-    color: black;
-    font-weight: 600;
-    margin: 20px auto;
-  }
-  .top-wrapper p {
-    font-size: 20px;
-    color: black;
-    font-weight: 500;
-    margin: 20px auto;
-  }
+.top-wrapper h1 {
+  font-size: 50px;
+  color: black;
+  font-weight: 600;
+  margin: 20px auto;
+}
 
-
-  #nav{
-    z-index: 1;
-    float: right;
-    margin-right: 10px;
-  }
-  #nav ul{
-    text-align: left;
-  }
-  #nav ul li{
+#nav{
+  z-index: 1;
+  float: right;
+  margin-right: 10px;
+}
+#nav ul{
+  text-align: left;
+}
+#nav ul li{
   padding: 5px 10px;
   list-style-type: none;
 }
@@ -148,9 +141,5 @@
   }
   .top-wrapper h1 {
     font-size: 35px;
-  }
-  .top-wrapper p {
-    text-align: left;
-    font-size: 20px;
   }
 }
