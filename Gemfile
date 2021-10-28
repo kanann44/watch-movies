@@ -64,10 +64,6 @@ gem 'bcrypt'
 gem 'bootstrap-sass', '3.3.6'
 gem 'jquery-rails'
 
-#group :production do
-  #gem 'pg', '0.20.0'
-#end
-
 group :production do
-  gem 'unicorn', '5.4.1'
+  gem 'pg', '0.20.0'
 end
